@@ -78,6 +78,20 @@ required init(coder aDecoder: NSCoder) {
     super.init(coder: aDecoder)
 }
 
+
+//  Now you can Archive your custom object with fillowing lines of code
+
+let data = NSKeyedArchiver.archivedData(withRootObject:<custom object>)
+UserDefaults.standard.set(data, forKey: "<Any Key you want>")
+UserDefaults.standard.synchronize()
+
+
+//  To Unarchive your custom object from User Defaults, use the following code
+
+if let data = UserDefaults.standard.value(forKey: "<Any Key you want>") {
+    movie = NSKeyedUnarchiver.unarchiveObject(with: data as! Data) as! <Custom Class>?
+}
+
 ```
 
 * All Done!!! FAAutoCode Class will automatically write the NSCoding protocols code for your Custom Modal Classes 
