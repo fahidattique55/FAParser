@@ -1,0 +1,22 @@
+{
+  "name": "FAParser",
+  "version": "0.1.0",
+  "summary": "A short description of FAParser.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/Fahid Attique/FAParser",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Fahid Attique": "fahadattique@appsgenii.eu"
+  },
+  "source": {
+    "git": "https://github.com/Fahid Attique/FAParser.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "FAParser/Classes/**/*"
+}

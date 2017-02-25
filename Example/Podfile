@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'FAParser_Example' do
+  pod 'FAParser', :path => '../'
+
+  target 'FAParser_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
