@@ -22,8 +22,8 @@ Swift 3.1
 ### JSON Parsing with Key Value Coding
 
 - Add the following code in your modal class.
-- Make sure the name of keys of json response matches exactly the same with the name of keys of your modal class 
----
+- Make sure the name of keys of json response matches exactly the same with the name of keys of your modal class
+
 
 ```swift
 
@@ -58,6 +58,7 @@ override func setValue(_ value: Any?, forUndefinedKey key: String) {
 ```
 
 
+
 ### Archiving & Unarchiving
 
 * Add the following code in your modal class.
@@ -79,7 +80,7 @@ required init(coder aDecoder: NSCoder) {
 
 ```
 
-* All Done ! FAAutoCode Class will automatically write the NSCoding protocols code for your Custom Modal Classes 
+* All Done!!! FAAutoCode Class will automatically write the NSCoding protocols code for your Custom Modal Classes 
 
 
 
