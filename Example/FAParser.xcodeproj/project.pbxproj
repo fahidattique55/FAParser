@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2912583E1E61FEE200D22FA4 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912583C1E61FEE200D22FA4 /* Movie.swift */; };
+		2912583F1E61FEE200D22FA4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2912583D1E61FEE200D22FA4 /* ViewController.swift */; };
 		34BD389F732803CC7EB63733 /* Pods_FAParser_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07B519F32428AEC5A8ACD571 /* Pods_FAParser_Tests.framework */; };
 		607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD51AFB9204008FA782 /* AppDelegate.swift */; };
-		607FACD81AFB9204008FA782 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACD71AFB9204008FA782 /* ViewController.swift */; };
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
@@ -29,14 +30,15 @@
 
 /* Begin PBXFileReference section */
 		030E7E9E97D0635DDBD56771 /* Pods-FAParser_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAParser_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-FAParser_Example/Pods-FAParser_Example.release.xcconfig"; sourceTree = "<group>"; };
-		0451AAB3FCD516852105423D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		0451AAB3FCD516852105423D /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		07B519F32428AEC5A8ACD571 /* Pods_FAParser_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FAParser_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FA159A505EEB74747E757F5 /* Pods-FAParser_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAParser_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FAParser_Example/Pods-FAParser_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		2912583C1E61FEE200D22FA4 /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		2912583D1E61FEE200D22FA4 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		47441D81ADEF4F86A9D70C11 /* Pods-FAParser_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAParser_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FAParser_Tests/Pods-FAParser_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		607FACD01AFB9204008FA782 /* FAParser_Example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAParser_Example.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACD41AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACD51AFB9204008FA782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		607FACD71AFB9204008FA782 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -44,9 +46,9 @@
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		7864A48E18171EB890986D6B /* Pods-FAParser_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FAParser_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FAParser_Tests/Pods-FAParser_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		AD2E60E0ED21E5395711B2C7 /* FAParser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = FAParser.podspec; path = ../FAParser.podspec; sourceTree = "<group>"; };
+		AD2E60E0ED21E5395711B2C7 /* FAParser.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = FAParser.podspec; path = ../FAParser.podspec; sourceTree = "<group>"; };
 		CDA858E17866824E49D10987 /* Pods_FAParser_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FAParser_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F7B15F91A5C3D5071E3A6004 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		F7B15F91A5C3D5071E3A6004 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,8 +104,9 @@
 		607FACD21AFB9204008FA782 /* Example for FAParser */ = {
 			isa = PBXGroup;
 			children = (
+				2912583C1E61FEE200D22FA4 /* Movie.swift */,
+				2912583D1E61FEE200D22FA4 /* ViewController.swift */,
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
-				607FACD71AFB9204008FA782 /* ViewController.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -361,7 +364,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
+				2912583F1E61FEE200D22FA4 /* ViewController.swift in Sources */,
+				2912583E1E61FEE200D22FA4 /* Movie.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -443,6 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -483,6 +488,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
@@ -496,6 +502,7 @@
 			baseConfigurationReference = 0FA159A505EEB74747E757F5 /* Pods-FAParser_Example.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FAParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;
@@ -510,6 +517,7 @@
 			baseConfigurationReference = 030E7E9E97D0635DDBD56771 /* Pods-FAParser_Example.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = "";
 				INFOPLIST_FILE = FAParser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				MODULE_NAME = ExampleApp;

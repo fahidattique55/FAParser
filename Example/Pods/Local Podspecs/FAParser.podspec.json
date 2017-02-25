@@ -1,18 +1,18 @@
 {
   "name": "FAParser",
   "version": "0.1.0",
-  "summary": "A short description of FAParser.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/Fahid Attique/FAParser",
+  "summary": "JSON Parsing technique using Key Value Coding.",
+  "description": "1. You can parse JSON using this technique with minimum lines of code.\n2. You can archive and unarchive a custom object in User Defaults with minimum lines of code.",
+  "homepage": "https://github.com/fahidattique55/FAParser",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "Fahid Attique": "fahadattique@appsgenii.eu"
+    "Fahid Attique": "fahidattique55@gmail.com"
   },
   "source": {
-    "git": "https://github.com/Fahid Attique/FAParser.git",
+    "git": "https://github.com/fahidattique55/FAParser.git",
     "tag": "0.1.0"
   },
   "platforms": {
