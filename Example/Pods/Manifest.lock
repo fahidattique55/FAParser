@@ -1,0 +1,16 @@
+PODS:
+  - FAParser (0.1.0)
+
+DEPENDENCIES:
+  - FAParser (from `../`)
+
+EXTERNAL SOURCES:
+  FAParser:
+    :path: ../
+
+SPEC CHECKSUMS:
+  FAParser: 70dc4bf0d20a44679b7913ff3c8149917504b8f7
+
+PODFILE CHECKSUM: c72448b713466545faf3c01d4a1ea22008a1397f
+
+COCOAPODS: 1.2.0
