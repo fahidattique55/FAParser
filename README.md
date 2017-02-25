@@ -22,7 +22,7 @@ pod "FAParser"
 
 ## Author
 
-Fahid Attique, fahadattique@appsgenii.eu
+Fahid Attique, fahadattique55@gmail.com
 
 ## License
 
