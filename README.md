@@ -9,7 +9,6 @@
 
 
 
-/swift-3.0-orange.svg?style=flat.svg
 
 ## Platform
 
