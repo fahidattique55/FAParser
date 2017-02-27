@@ -2,10 +2,15 @@
 
 
 [![Swift version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)
-[![Support Dependecy Manager](https://img.shields.io/badge/support-CocoaPods](https://img.shields.io/badge/support-CocoaPods)
+
+[![Support Dependecy Manager](https://img.shields.io/badge/support-CocoaPods)](https://img.shields.io/badge/support-CocoaPods)
+
 [![Version](https://img.shields.io/cocoapods/v/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
+
 [![License](https://img.shields.io/cocoapods/l/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
+
 [![Platform](https://img.shields.io/cocoapods/p/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
+
 
 
 ## Platform
@@ -23,7 +28,8 @@ Swift 3.0
 ## Pre-Requisite
 
 * Key Value Coding
-* For more details about KVC please visit Apple's documentation  [https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/)]
+* To learn about key-value-coding, please visit Apple's official KVC [documentation](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/) 
+
 
 ## Usage
 
