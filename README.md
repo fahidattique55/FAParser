@@ -1,5 +1,8 @@
 # FAParser
 
+
+[![Swift version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)
+[![Support Dependecy Manager](https://img.shields.io/badge/support-CocoaPods](https://img.shields.io/badge/support-CocoaPods)
 [![Version](https://img.shields.io/cocoapods/v/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
 [![License](https://img.shields.io/cocoapods/l/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
 [![Platform](https://img.shields.io/cocoapods/p/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
@@ -7,7 +10,7 @@
 
 ## Platform
 
-Swift 3.1
+Swift 3.0
 
 
 ## Features
@@ -15,6 +18,12 @@ Swift 3.1
 * You can parse JSON using Apple's Key value coding technique with minimum lines of code.
 * You can archive & unarchive your custom object in User Defaults with minimum lines of code.
 
+
+
+## Pre-Requisite
+
+* Key Value Coding
+* For more details about KVC please visit Apple's documentation  [https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueCoding/)]
 
 ## Usage
 
@@ -38,13 +47,16 @@ override func setValue(_ value: Any?, forKey key: String) {
 
     if let aVlaue = value {
 
-        if key == "JSON Object Key" {
+        if key == "JSON Object Key" {   //  If JSON have custom object
+
             customObject = <Custom Object Class Name>.objectfrom(json: value)
         }
-        else if key == "JSON Array Key" {
+        else if key == "JSON Array Key" {   //  If JSON have custom objects Array
+
             customObjectsArray = <Custom Object Class Name>.objectsfrom(jsonArray: value as! Array)
         }
-    else{
+        else{   //  In case of simple JSON keys
+
             super.setValue(aVlaue, forKey: key)
         }
     }
