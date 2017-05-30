@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FAParser'
-  s.version          = '0.1.0'
+  s.version          = '0.1.2'
   s.summary          = 'JSON Parsing technique using Key Value Coding.'
 
   s.description      = <<-DESC
@@ -9,12 +9,11 @@ Pod::Spec.new do |s|
                        DESC
 
   s.homepage         = 'https://github.com/fahidattique55/FAParser'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Fahid Attique' => 'fahidattique55@gmail.com' }
   s.source           = { :git => 'https://github.com/fahidattique55/FAParser.git', :tag => s.version.to_s }
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.0'
 
   s.source_files = 'FAParser/Classes/**/*'
   
