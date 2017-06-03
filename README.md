@@ -1,7 +1,7 @@
 # FAParser
 
 
-![Alt text](http://i.imgur.com/RVcpoEO.jpg "FAParser-Image")
+![Alt text](http://i.imgur.com/Ij9aEPh.png "FAParser-Image")
 
 [![Swift version](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)](https://img.shields.io/badge/swift-3.0-orange.svg?style=flat.svg)
 [![Support Dependecy Manager](https://img.shields.io/badge/support-CocoaPods-red.svg?style=flat.svg)](https://img.shields.io/badge/support-CocoaPods-red.svg?style=flat.svg)
@@ -9,11 +9,6 @@
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)
 [![Platform](https://img.shields.io/cocoapods/p/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
 
-
-
-## Platform
-
-Swift 3.0
 
 
 ## Features
