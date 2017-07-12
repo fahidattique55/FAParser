@@ -354,20 +354,18 @@ if let data = UserDefaults.standard.value(forKey: "<Any Key you want>") {
 ### AFJSONable 
 
 
-- Let say, you want to convert Movie class object in dictionary to pass it in some api request. Just inherit it from Class "AZJSONable" 
+- Let say, you want to convert Movie class object in dictionary to pass it in some api request. Just confirm it to protocol "AZJSONable" 
 
 ```swift
 
 import FAParser
 
-//  Subclass your Custom Modal Class with FAAutoCode Class 
+//  Confirm your Modal Class with AZJSONable Protocol  
 
 class Movie: AZJSONable {  
 
-...     //  Additional code, if exist 
-
-var title:  String = ""
-var actor:  String = ""
+    var title:  String = ""
+    var actor:  String = ""
 }
 
 
@@ -377,43 +375,43 @@ var actor:  String = ""
 
 ```swift
 
-let movie: Movie = Movie()
+    let movie: Movie = Movie()
 
-movie.title     = "La La Land"
-movie.actor    = "Emma Stone"
+    movie.title     = "La La Land"
+    movie.actor    = "Emma Stone"
 
-let dictFormat :[String: Any] = (movie.toDictionary()) // will convert full object to dictionary
+    let dictFormat :[String: Any] = (movie.toDictionary()) // will convert full object to dictionary
 
 
-// To convert it in JSON String 
+    // To convert it in JSON String 
 
-dictFormat.jsonString() // or use 
+    dictFormat.jsonString() // or use 
 
-dictFormat.jsonString(prettify: true)
+    dictFormat.jsonString(prettify: true)
 
 
 ```
 
-- Lets say, you keys are different form what your attributes name than you need to implement "CustomReflectable" protocol 
+- Lets say, your keys are different form what your attributes name, than you need to implement "CustomReflectable" protocol 
 
 ```swift
 
 import FAParser
 
-
 extension Movie: CustomReflectable {  
+
 /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
 
-var customMirror: Mirror {
-let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
-("Custom_Key_Name", self.title), 
-("Custom_Key_Name", self.actor) )
+    var customMirror: Mirror {
+    let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
+    ("Custom_Key_Name", self.title), 
+    ("Custom_Key_Name", self.actor) )
 
 
-let mirror = Mirror.init(Song.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
+    let mirror = Mirror.init(Movie.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
 
-return mirror
-}
+    return mirror
+    }
 }
 
 ```
