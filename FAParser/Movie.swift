@@ -55,20 +55,20 @@ class Song: FAAutoCode {
         print("This class is not key-value-compliant for key: \(key) & value : \(String(describing: value))")
     }
 }
-/*
- extension Song: CustomReflectable { /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
+
+ /*extension Song: CustomReflectable { /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
  
  var customMirror: Mirror {
  let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
- ("title", self.title), ("singer", self.singer))
+ ("head", self.title), ("singer", self.singer))
  
  
  let mirror = Mirror.init(Song.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
  
  return mirror
  }
- }*/
-
+ }
+*/
 
 
 //  Inheriting from FAAutoCode class to add archiving capability to Movie object with out implemention of NSCoding protocols code. FAAutoCode will auto implement the work for you.
@@ -100,8 +100,8 @@ class Movie: FAAutoCode, AZJSONable {
     var type :String = ""
     var Response :String = ""
     
-    var bestSong:Song = Song()
-    var allSongs = Array<Song>()
+    var bestSong:Song? = nil
+    var allSongs: Array<Song>? = nil
     
     
     

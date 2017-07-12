@@ -130,6 +130,10 @@ extension AZJSONable {
                         
                         dict[key] = array
                     }
+                    else if displayType == .optional {
+                        dict[key] = (dictionaryAZRepresentation(mirror: valueMirror)["some"])
+
+                    }
                 }
                 else {
                     dict[key] = child.value
