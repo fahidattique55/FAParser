@@ -20,7 +20,7 @@ typealias FailureClosure = (_ error: Error?) -> Void
 
 //  Inheriting from FAAutoCode class to add archiving capability to Song object with out implemention of NSCoding protocols code. FAAutoCode will auto implement the work for you.
 
-class Song: FAAutoCode {
+class Song: FAAutoCode, AZJSONable{
     
     
     //  Properties should have same name as of keys in JSON Response
@@ -55,20 +55,19 @@ class Song: FAAutoCode {
         print("This class is not key-value-compliant for key: \(key) & value : \(String(describing: value))")
     }
 }
+/*extension Song: CustomReflectable { /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
+ 
+    var customMirror: Mirror {
+        let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
+            ("customKey", self.title), ("singer", self.singer))
+ 
 
- /*extension Song: CustomReflectable { /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
- 
- var customMirror: Mirror {
- let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
- ("head", self.title), ("singer", self.singer))
- 
- 
- let mirror = Mirror.init(Song.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
- 
- return mirror
+        let mirror = Mirror.init(Song.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
+        
+        return mirror
  }
- }
-*/
+}*/
+
 
 
 //  Inheriting from FAAutoCode class to add archiving capability to Movie object with out implemention of NSCoding protocols code. FAAutoCode will auto implement the work for you.

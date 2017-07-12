@@ -51,10 +51,8 @@ class ViewController: UIViewController {
                 Movie.archiveMovie(movieToArchive)
             }
         })
-        let movie: Movie = Movie()
-        let dictFormat :[String: Any] = (movie.toDictionary())
         
-        dictFormat.jsonString()
+        let dictFormat :[String: Any] = (movie1?.toDictionary())!
         
         print(dictFormat.jsonString(prettify: true)!)
     }
