@@ -67,8 +67,30 @@ class Song: FAAutoCode, AZJSONable{
         return mirror
  }
 }*/
+/* // Saving to later paste in FAParser
+- Lets say, your keys are different form what your attributes name, than you need to implement "CustomReflectable" protocol
 
+```swift
 
+import FAParser
+
+extension Movie: CustomReflectable {
+    
+    /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
+    
+    var customMirror: Mirror {
+        let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
+            ("Custom_Key_Name", self.title),
+                                                      ("Custom_Key_Name", self.actor) )
+        
+        
+        let mirror = Mirror.init(Movie.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
+        
+        return mirror
+    }
+}
+
+```*/
 
 //  Inheriting from FAAutoCode class to add archiving capability to Movie object with out implemention of NSCoding protocols code. FAAutoCode will auto implement the work for you.
 

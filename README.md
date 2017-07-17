@@ -392,32 +392,6 @@ class Movie: AZJSONable {
 
 ```
 
-- Lets say, your keys are different form what your attributes name, than you need to implement "CustomReflectable" protocol 
-
-```swift
-
-import FAParser
-
-extension Movie: CustomReflectable {  
-
-/* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
-
-    var customMirror: Mirror {
-    let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
-    ("Custom_Key_Name", self.title), 
-    ("Custom_Key_Name", self.actor) )
-
-
-    let mirror = Mirror.init(Movie.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
-
-    return mirror
-    }
-}
-
-```
-
-
-
 ## License
 
 FAParser is available under the MIT license. See the LICENSE file for more info.
