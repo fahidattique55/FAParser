@@ -12,7 +12,7 @@ import AVFoundation
 
 class ViewController: UIViewController {
     
-
+    
     // MARK: Life Cycle
     
     override func viewDidLoad() {
@@ -51,6 +51,10 @@ class ViewController: UIViewController {
                 Movie.archiveMovie(movieToArchive)
             }
         })
+        
+        let dictFormat :[String: Any] = (movie1?.toDictionary())!
+        
+        print(dictFormat.jsonString(prettify: true)!)
     }
 }
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		20899CCF1F15013600E990EC /* DataExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20899CCE1F15013600E990EC /* DataExtension.swift */; };
 		29E26CA91F09204000A39D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E26CA81F09204000A39D25 /* AppDelegate.swift */; };
 		29E26CAB1F09204000A39D25 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29E26CAA1F09204000A39D25 /* ViewController.swift */; };
 		29E26CAE1F09204000A39D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 29E26CAC1F09204000A39D25 /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		20899CCE1F15013600E990EC /* DataExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtension.swift; sourceTree = "<group>"; };
 		29E26CA51F09204000A39D25 /* FAParser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FAParser.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E26CA81F09204000A39D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		29E26CAA1F09204000A39D25 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		20899CCD1F15012900E990EC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				20899CCE1F15013600E990EC /* DataExtension.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		29E26C9C1F09203F00A39D25 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		29E26CA71F09204000A39D25 /* FAParser */ = {
 			isa = PBXGroup;
 			children = (
+				20899CCD1F15012900E990EC /* Extensions */,
 				29E26CDC1F09211700A39D25 /* Models */,
 				29E26CD61F09205000A39D25 /* AppDelegate */,
 				29E26CD71F09205D00A39D25 /* Controllers */,
@@ -328,6 +339,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29E26CAB1F09204000A39D25 /* ViewController.swift in Sources */,
+				20899CCF1F15013600E990EC /* DataExtension.swift in Sources */,
 				29E26CDF1F09222B00A39D25 /* FAParser.swift in Sources */,
 				29E26CE51F0934F300A39D25 /* README.md in Sources */,
 				29E26CA91F09204000A39D25 /* AppDelegate.swift in Sources */,
@@ -582,6 +594,7 @@
 				29E26CCF1F09204000A39D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29E26CD01F09204000A39D25 /* Build configuration list for PBXNativeTarget "FAParserTests" */ = {
 			isa = XCConfigurationList;
@@ -590,6 +603,7 @@
 				29E26CD21F09204000A39D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		29E26CD31F09204000A39D25 /* Build configuration list for PBXNativeTarget "FAParserUITests" */ = {
 			isa = XCConfigurationList;
@@ -598,6 +612,7 @@
 				29E26CD51F09204000A39D25 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -15,7 +15,8 @@
 
 * You can parse JSON using Apple's Key value coding technique with minimum lines of code.
 * You can archive & unarchive your custom object in User Defaults with minimum lines of code.
-
+* You can convert models to JSON request format e.g [String: Any] Dictionary
+* You can further convert this dictionary to JSON string format
 
 ## Installation
 
@@ -333,8 +334,6 @@ class Movie: FAAutoCode {
 
 * All Done!!! FAAutoCode Class will automatically write the NSCoding protocols code for class Movie
 
-
-
 ```swift
 
 //  Now you can Archive your custom object with fillowing lines of code
@@ -352,6 +351,46 @@ if let data = UserDefaults.standard.value(forKey: "<Any Key you want>") {
 
 ```
 
+### AFJSONable 
+
+
+- Let say, you want to convert Movie class object in dictionary to pass it in some api request. Just confirm it to protocol "AZJSONable" 
+
+```swift
+
+import FAParser
+
+//  Confirm your Modal Class with AZJSONable Protocol  
+
+class Movie: AZJSONable {  
+
+    var title:  String = ""
+    var actor:  String = ""
+}
+
+
+```
+
+- And to convert we only just need to do this
+
+```swift
+
+    let movie: Movie = Movie()
+
+    movie.title     = "La La Land"
+    movie.actor    = "Emma Stone"
+
+    let dictFormat :[String: Any] = (movie.toDictionary()) // will convert full object to dictionary
+
+
+    // To convert it in JSON String 
+
+    dictFormat.jsonString() // or use 
+
+    dictFormat.jsonString(prettify: true)
+
+
+```
 
 ## License
 
