@@ -20,21 +20,23 @@ typealias FailureClosure = (_ error: Error?) -> Void
 
 //  Inheriting from FAAutoCode class to add archiving capability to Song object with out implemention of NSCoding protocols code. FAAutoCode will auto implement the work for you.
 
-class Song: FAAutoCode {
-
+class Song: FAAutoCode, AZJSONable{
+    
     
     //  Properties should have same name as of keys in JSON Response
-
-    var title :String?
-    var singer :String?
-
+    
+    var title :String = ""
+    var singer :String = ""
+    
+    
+    
     
     override init() {
         super.init()
     }
-
+    
     // MARK: NSCoding
-
+    
     required init(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
     }
@@ -53,50 +55,81 @@ class Song: FAAutoCode {
         print("This class is not key-value-compliant for key: \(key) & value : \(String(describing: value))")
     }
 }
+/*extension Song: CustomReflectable { /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
+ 
+    var customMirror: Mirror {
+        let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
+            ("customKey", self.title), ("singer", self.singer))
+ 
 
+        let mirror = Mirror.init(Song.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
+        
+        return mirror
+ }
+}*/
+/* // Saving to later paste in FAParser
+- Lets say, your keys are different form what your attributes name, than you need to implement "CustomReflectable" protocol
 
+```swift
 
+import FAParser
 
+extension Movie: CustomReflectable {
+    
+    /* for custom key reprenstation implement CustomReflectable protocol and assign DictionaryLiteral to customMirror object available in Mirrir class */
+    
+    var customMirror: Mirror {
+        let children = DictionaryLiteral<String, Any>(dictionaryLiteral:
+            ("Custom_Key_Name", self.title),
+                                                      ("Custom_Key_Name", self.actor) )
+        
+        
+        let mirror = Mirror.init(Movie.self, children: children, displayStyle: Mirror.DisplayStyle.class, ancestorRepresentation: .suppressed)
+        
+        return mirror
+    }
+}
+
+```*/
 
 //  Inheriting from FAAutoCode class to add archiving capability to Movie object with out implemention of NSCoding protocols code. FAAutoCode will auto implement the work for you.
 
 
-class Movie: FAAutoCode {
+class Movie: FAAutoCode, AZJSONable {
     
     
     //  Properties should have same name as of keys in JSON Response
-
-    var Title :String?
-    var Year :String?
-    var Rated :String?
-    var Released :String?
-    var Runtime :String?
-    var Genre :String?
-    var Director :String?
-    var Writer :String?
-    var Actors :String?
-    var Plot :String?
-    var Language :String?
-    var Country :String?
-    var Awards :String?
-    var Poster :String?
-    var Metascore :String?
-    var imdbRating :String?
-    var imdbVotes :String?
-    var imdbID :String?
-    var type :String?
-    var Response :String?
-
+    
+    var Title :String = ""
+    var Year  = 2016
+    var Rated :String = ""
+    var Released :String = ""
+    var Runtime :String = ""
+    var Genre :String = ""
+    var Director :String = ""
+    var Writer :String = ""
+    var Actors :String = ""
+    var Plot :String = ""
+    var Language :String = ""
+    var Country :String = ""
+    var Awards :String = ""
+    var Poster :String = ""
+    var Metascore :String = ""
+    var imdbRating :String = ""
+    var imdbVotes :String = ""
+    var imdbID :String = ""
+    var type :String = ""
+    var Response :String = ""
+    
     var bestSong:Song? = nil
-    var allSongs:Array<Song>? = nil
-
-
+    var allSongs: Array<Song>? = nil
+    
     
     
     override init() {
         super.init()
     }
-
+    
     
     // MARK: NSCoding
     
@@ -114,7 +147,7 @@ class Movie: FAAutoCode {
         if let aVlaue = value {
             
             if key == "bestSong" {
-                bestSong = Song.objectfrom(json: value)
+                bestSong = Song.objectfrom(json: value)!
             }
             else if key == "allSongs" {
                 allSongs = Song.objectsfrom(jsonArray: value as! Array)
@@ -134,15 +167,15 @@ class Movie: FAAutoCode {
     
     //  Archiving in UserDefaults
     static func archiveMovie(_ movie:Movie){
-
+        
         let data = NSKeyedArchiver.archivedData(withRootObject:movie)
         UserDefaults.standard.set(data, forKey: "movie")
         UserDefaults.standard.synchronize()
     }
-
+    
     
     //  Un-Archiving from UserDefaults
-
+    
     static func loadArchivedMovie() -> Movie?{
         
         var movie:Movie? = nil
@@ -158,7 +191,7 @@ class Movie: FAAutoCode {
     func searchMovie(success:@escaping SuccessClosure){
         
         let bestSongJSON:Dictionary = ["title":"Beautiful","singer":"eminem"]
-
+        
         let song1:Dictionary = ["title":"song 1","singer":"singer 1"]
         let song2:Dictionary = ["title":"song 2","singer":"singer 2"]
         let song3:Dictionary = ["title":"song 3","singer":"singer 3"]
@@ -168,7 +201,7 @@ class Movie: FAAutoCode {
         allSongsJSON.append(song1)
         allSongsJSON.append(song2)
         allSongsJSON.append(song3)
-
+        
         
         //  Creating Dummy JSON object as response of API call
         
@@ -201,10 +234,10 @@ class Movie: FAAutoCode {
             //  Simple JSON
             
             "bestSong" : bestSongJSON,
-
-
+            
+            
             //  JSON Array
-
+            
             "allSongs" : allSongsJSON
         ]
         

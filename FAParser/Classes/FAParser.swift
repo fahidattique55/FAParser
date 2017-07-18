@@ -88,7 +88,62 @@ public extension NSObject {
     }
 }
 
+protocol AZJSONable {}
 
+extension AZJSONable {
+    func toDictionary() -> [String:Any] {
+        var dict = [String:Any]()
+        let mirrorSelf = Mirror(reflecting: self)
+        
+        dict = dictionaryAZRepresentation(mirror: mirrorSelf)
+        
+        return dict
+    }
+    
+    func dictionaryAZRepresentation(mirror: Mirror) -> [String: Any] {
+        var dict = [String:Any]()
+        
+        
+        for child in mirror.children {
+            if let key = child.label {
+                
+                let valueMirror = Mirror(reflecting: child.value)
+                
+                if let displayType = valueMirror.displayStyle {
+                    
+                    if displayType == .class{
+                        
+                        dict[key] = dictionaryAZRepresentation(mirror: valueMirror)
+                        
+                    }
+                    else if displayType == .collection {
+                        
+                        var array = Array<[String: Any]>()
+                        
+                        for ch in (child.value as! Array<Any>) {
+                            
+                            let mir = Mirror(reflecting: ch)
+                            
+                            array.append(dictionaryAZRepresentation(mirror: mir))
+                            
+                        }
+                        
+                        dict[key] = array
+                    }
+                    else if displayType == .optional {
+                        dict[key] = (dictionaryAZRepresentation(mirror: valueMirror)["some"])
+
+                    }
+                }
+                else {
+                    dict[key] = child.value
+                }
+            }
+        }
+        return dict
+    }
+    
+}
 
 
 
