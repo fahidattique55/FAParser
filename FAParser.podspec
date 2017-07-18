@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'FAParser'
-  s.version          = '0.1.4'
+  s.version          = '0.1.5'
   s.summary          = 'JSON Parsing technique using Key Value Coding.'
 
   s.description      = <<-DESC
