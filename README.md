@@ -8,7 +8,8 @@
 [![Version](https://img.shields.io/cocoapods/v/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
 [![License](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)](https://img.shields.io/badge/License-MIT-brightgreen.svg?style=flat.svg)
 [![Platform](https://img.shields.io/cocoapods/p/FAParser.svg?style=flat)](http://cocoapods.org/pods/FAParser)
-
+[![CocoaPods](https://img.shields.io/cocoapods/dt/FAParser.svg)](http://cocoapods.org/pods/FAParser)
+[![CocoaPods](https://img.shields.io/cocoapods/at/FAParser.svg)](http://cocoapods.org/pods/FAParser)
 
 
 ## Features
